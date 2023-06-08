@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "feeluown-qqmusic"
+version = "0.1.0"
+description = "FeelUOwn plugin for QQ Music"
+authors = ["feeluown team"]
+readme = "README.md"
+license = "GPL3"
+packages = [{ include = "feeluown_qqmusic" }]
+keywords = ["feeluown", "plugin", "qqmusic"]
+classifiers = [
+    'Development Status :: 3 - Alpha',
+    'Programming Language :: Python :: 3.8',
+    'Programming Language :: Python :: 3.9',
+    'Programming Language :: Python :: 3.10',
+    'Programming Language :: Python :: 3.11',
+    'Programming Language :: Python :: 3 :: Only'
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+feeluown = ">=3.8.12"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "*"
+pyqt5 = "*"
+pre-commit = "*"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.plugins."fuo.plugins_v1"]
+"qqmusic" = "feeluown_qqmusic"
